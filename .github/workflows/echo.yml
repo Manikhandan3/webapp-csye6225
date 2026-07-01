@@ -7,11 +7,12 @@ on:
         description: 'Enter the message you want to print'
         required: true
         type: string
-        default: 'Hello, World!'
+        default: 'Hello World'
 
 jobs:
   display_message:
     runs-on: ubuntu-latest
     steps:
       - name: Print the Input
-        run: echo "The user said: ${{ inputs.user_message }}"
+        run: |
+          echo "The user said: ${{ inputs.user_message }}"
